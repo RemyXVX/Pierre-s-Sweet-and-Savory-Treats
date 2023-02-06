@@ -2,12 +2,9 @@
   Layout = "_Layout";
 }
 
-@using System.Security.Claims;
-
-<h2>Login Info:</h2>
-
 @if (User.Identity.IsAuthenticated)
 {
+  <h2>Login Info:</h2>
   <h1>Welcome @User.Identity.Name!</h1>
   @using (Html.BeginForm("LogOff", "Account"))
   {
@@ -18,7 +15,11 @@
 else
 {
   <h2>Login foo..</h2>
-  <span></span>
+  <div class="imgbox2">
+    <div class="fail_login_imgbox">
+    </div>
+  </div>
+<br>
 }
 <br>
 <br>

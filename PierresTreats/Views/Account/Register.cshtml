@@ -4,19 +4,28 @@
 
 @using PierresTreats.ViewModels
 @model RegisterViewModel
-
-@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+<br>
+@if(!ViewData.ModelState.IsValid)
 {
-  @Html.LabelFor(user => user.Email)
-  @Html.TextBoxFor(user => user.Email)
-  
-  @Html.LabelFor(user => user.Password)
-  @Html.PasswordFor(user => user.Password)
-  
-  @Html.LabelFor(user => user.ConfirmPassword)
-  @Html.PasswordFor(user => user.ConfirmPassword)
-  
-  <input type="submit" class="btn btn-outline-secondary" value="Register" />
+  @Html.ValidationSummary("Please fix the following error(s) and resubmit the form:")
+  @Html.ActionLink("Register", "Register", "Account", null, new { @class="btn btn-outline-secondary" })
+  <br>
 }
-<br>
-<br>
+else
+{
+  @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+  {
+    @Html.LabelFor(user => user.Email, new { @class = "control-label" })
+    @Html.TextBoxFor(user => user.Email, new { @class = "form-control", @required = "required" })
+    <br>
+    @Html.LabelFor(user => user.Password, new { @class = "control-label" })
+    @Html.PasswordFor(user => user.Password, new { @class = "form-control", @required = "required" })
+    <br>
+    @Html.LabelFor(user => user.ConfirmPassword, new { @class = "control-label" })
+    @Html.PasswordFor(user => user.ConfirmPassword, new { @class = "form-control", @required = "required" })
+    <br>
+    <input type="submit" class="btn btn-outline-secondary" value="Register" required />
+  }
+  <br>
+  <br>
+}
