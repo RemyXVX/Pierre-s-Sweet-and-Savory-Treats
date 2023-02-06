@@ -10,13 +10,13 @@
 @using (Html.BeginForm())
 {
   <div>
-  @Html.LabelFor(m => m.TreatName)
-  @Html.TextBoxFor(m => m.TreatName)
+  @Html.LabelFor(m => m.TreatName, new { @class = "control-label" })
+  @Html.TextBoxFor(m => m.TreatName, new { @class = "form-control", @required = "required" })
   <br>
-  @Html.LabelFor(m => m.TreatDescription)
-  @Html.TextBoxFor(m => m.TreatDescription)
+  @Html.LabelFor(m => m.TreatDescription, new { @class = "control-label" })
+  @Html.TextBoxFor(m => m.TreatDescription, new { @class = "form-control", @required = "required" })
   <br>
-  @Html.LabelFor(m => m.TreatQuantity)
+  @Html.LabelFor(m => m.TreatQuantity, new { @class = "control-label" })
   <select name="TreatQuantity">
     @for (int i = 1; i <= 10; i++)
     {
