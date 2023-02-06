@@ -1,0 +1,17 @@
+.imgbox {
+  width: 500px;
+  height: 469px;
+  background-color: lightgray;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pierre_imgbox {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/pierre.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
