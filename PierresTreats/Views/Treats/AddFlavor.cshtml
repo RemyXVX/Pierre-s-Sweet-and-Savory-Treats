@@ -1,0 +1,26 @@
+@{
+  Layout="_Layout";
+}
+
+@model PierresTreats.Models.Treat
+
+<h2>Add a Flavor</h2>
+<h4>@Html.DisplayFor(m => m.TreatName)</h4>
+<hr />
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(m => m.TreatId)
+
+  @Html.Label("Select Flavor")
+  @Html.DropDownList("FlavorId", null, new { @class="btn btn-secondary dropdown-toggle" })
+  <br>
+  <input type="submit" class="btn btn-outline-secondary" value="Save"/>
+}
+<br>
+<div>
+  <span>@Html.ActionLink("Treats List", "Index")</span>
+  <br>
+  <span>@Html.ActionLink("Flavors List", "Index", "Treats")</span>
+</div>
+<br>
+<br>

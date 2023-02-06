@@ -1,0 +1,24 @@
+@{
+  Layout="_Layout";
+}
+
+@model PierresTreats.Models.Treat
+
+<h2>The treat aint cutting it?</h2>
+<h5>say less!</h5>
+<hr />
+
+@Html.DisplayNameFor(m => m.TreatName): @Html.DisplayFor(m => m.TreatName)
+@using (Html.BeginForm())
+{
+  <input type="submit" class="btn btn-outline-secondary" value="Delete" />
+}
+
+<br>
+<div>
+  <span>@Html.ActionLink("List of Treats", "Index")</span>
+  <br>
+  <span>@Html.ActionLink("List of Flavors", "Index", "Flavors")</span>
+</div>
+<br>
+<br>
