@@ -1,8 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
-using PierresTreats.Models;
 using System.Threading.Tasks;
 using PierresTreats.ViewModels;
+
+using PierresTreats.Models;
 
 namespace PierresTreats.Controllers
 {
