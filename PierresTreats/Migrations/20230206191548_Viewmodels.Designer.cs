@@ -11,8 +11,8 @@ using PierresTreats.Models;
 namespace PierresTreats.Migrations
 {
     [DbContext(typeof(PierresTreatsContext))]
-    [Migration("20230205072711_InitialCreation")]
-    partial class InitialCreation
+    [Migration("20230206191548_Viewmodels")]
+    partial class Viewmodels
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
