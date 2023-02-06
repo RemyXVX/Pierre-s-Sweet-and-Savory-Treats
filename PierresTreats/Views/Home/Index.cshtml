@@ -4,11 +4,20 @@
 
 <h1>Pierre's Sweet and Savory Treats</h1><br>
 <h3>They're to die for!</h3>
-
-<div class="">
+@if (User.Identity.IsAuthenticated)
+{
+  <div>
+    <span>@Html.ActionLink("Check out Treats", "Index", "Treats")</span>
+    <br>
+    <span>@Html.ActionLink("Check out Flavors", "Index", "Flavors")</span>
+    <br>
+  </div>
+}
+else
+{
+  <span>Please register @Html.ActionLink("here", "Register", "Account")</span>
   <br>
-  <span>@Html.ActionLink("Check out Treats", "Index", "Treats")</span>
-  <br>
-  <span>@Html.ActionLink("Check out Flavors", "Index", "Flavors")</span>
-  <br>
-</div>
+  <span>or login @Html.ActionLink("here", "Login", "Account")</span>
+}
+<br>
+<br>
