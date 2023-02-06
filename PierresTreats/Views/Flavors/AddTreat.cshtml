@@ -4,12 +4,12 @@
 
 @model PierresTreats.Models.Flavor
 
-<h2>Add A Treat</h2>
-<h4>@Html.DisplayFor(model => model.FlavorType)</h4>
+<h2>Add a Treat</h2>
+<h4>@Html.DisplayFor(m => m.FlavorType)</h4>
 <hr />
 @using (Html.BeginForm())
 {
-  @Html.HiddenFor(model => model.FlavorId)
+  @Html.HiddenFor(m => m.FlavorId)
 
   @Html.Label("Select Treat")
   @Html.DropDownList("TreatId", null, new { @class="btn btn-secondary dropdown-toggle" })
