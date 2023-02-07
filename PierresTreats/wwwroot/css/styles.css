@@ -1,3 +1,77 @@
+body {
+  background-image: url("../img/backsnacks.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.outside {
+  display: flex;
+}
+
+.first_inner_div {
+  background-color: antiquewhite;
+  display: flex; 
+  margin-top: 3.5rem;
+  width: 650px;
+  height: 700px;
+  border-radius: 5px;
+  box-shadow: 0 4.5px 12px rgb(24, 22, 22), 0 4.5px 12px rgb(24, 22, 22);
+}
+
+.second_inner_div {
+  padding: 1rem;
+} 
+
+#scroller {
+  width: 646px;
+  height: 696px;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
+
+.second_inner_div h1 {
+  text-align: center;
+}
+
+.outer_navigation_bar {
+  display: flex;
+  height: 50px;
+}
+
+.navigation_bar {
+  margin-top: 2rem;
+  width: 650px;
+  height: 80px;
+  background: #383C2Fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  box-shadow: 0 4.5px 12px rgb(24, 22, 22), 0 4.5px 12px rgb(24, 22, 22);
+}
+
+.navigation_bar span{
+  height: 40px;
+  padding-bottom: 10px;
+}
+
+.navigation_bar #small{
+  margin-top: 21px;
+  background-color: antiquewhite;
+}
+
+.navigation_bar header {
+  font-size: 3rem;
+  color: grey;
+  text-align: center;
+  line-height: 4.5rem;
+  user-select: none;
+  border-radius: 2px;
+}
+
 .imgbox {
   width: 500px;
   height: 469px;
