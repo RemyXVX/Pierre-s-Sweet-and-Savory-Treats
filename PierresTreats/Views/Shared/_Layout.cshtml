@@ -15,7 +15,7 @@
     <div class="container">
       <div class="outside">
         <div class="first_inner_div">
-          <div class="Second_inner_div">
+          <div class="Second_inner_div" id="scroller">
           @RenderBody()
           </div>
         </div>
@@ -27,12 +27,12 @@
         <div class="navigation_bar">
           <header>Navi</header>
           @if (User.Identity.IsAuthenticated) {
-            <span class="btn btn-outline-secondary">@Html.ActionLink("Home", "Index", "Home")</span>
+            <span id="small" class="btn btn-outline-secondary">@Html.ActionLink("Home", "Index", "Home")</span>
             <br>
-            <span class="btn btn-outline-secondary">@Html.ActionLink("Contact", "About", "Home")</span>
+            <span id="small" class="btn btn-outline-secondary">@Html.ActionLink("Contact", "About", "Home")</span>
             <br>
             <span>
-              <p>  @User.Identity.Name</p> 
+              <span>@User.Identity.Name</span> 
               @using (Html.BeginForm("LogOff", "Account"))
               {
                 <input type="submit" class="btn btn-primary" value="Log out" /> 
@@ -41,12 +41,11 @@
           }
           else 
           {
-            <span class="btn btn-outline-secondary">@Html.ActionLink("Home", "Index", "Home")</span>
+            <span id="small" class="btn btn-outline-secondary">@Html.ActionLink("Home", "Index", "Home")</span>
             <br>
-            <span class="btn btn-outline-secondary">@Html.ActionLink("Login", "Login", "Account")</span>
+            <span id="small" class="btn btn-outline-secondary">@Html.ActionLink("Login", "Login", "Account")</span>
             <br>
-            @* <span class="btn btn-outline-secondary">@Html.ActionLink("Insert thing here", "Insert thing here", "Account")</span> *@
-            <span class="btn btn-outline-secondary">@Html.ActionLink("Contact", "About", "Home")</span>
+            <span id="small" class="btn btn-outline-secondary">@Html.ActionLink("Contact", "About", "Home")</span>
             <br>
           } 
         </div>
