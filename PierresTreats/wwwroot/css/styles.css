@@ -53,12 +53,17 @@ body {
   box-shadow: 0 4.5px 12px rgb(24, 22, 22), 0 4.5px 12px rgb(24, 22, 22);
 }
 
-.navigation_bar span{
+.navigation_bar span {
   height: 40px;
   padding-bottom: 10px;
 }
 
-.navigation_bar #small{
+/* .navigation_bar span :hover {
+  size-adjust: 10px;
+} */
+
+
+.navigation_bar #small {
   margin-top: 21px;
   background-color: antiquewhite;
 }
@@ -70,6 +75,10 @@ body {
   line-height: 4.5rem;
   user-select: none;
   border-radius: 2px;
+}
+
+.navigation_bar form {
+  user-select: none;
 }
 
 .imgbox {

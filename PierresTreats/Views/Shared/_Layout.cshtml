@@ -24,20 +24,20 @@
 
     <div class="container">
       <div class="outer_navigation_bar">
-        <div class="navigation_bar">
+        <div class="navigation_bar" id="hover">
           <header>Navi</header>
           @if (User.Identity.IsAuthenticated) {
             <span id="small" class="btn btn-outline-secondary">@Html.ActionLink("Home", "Index", "Home")</span>
             <br>
             <span id="small" class="btn btn-outline-secondary">@Html.ActionLink("Contact", "About", "Home")</span>
             <br>
-            <span>
-              <span>@User.Identity.Name</span> 
+            <div>
+              @User.Identity.Name 
               @using (Html.BeginForm("LogOff", "Account"))
               {
                 <input type="submit" class="btn btn-primary" value="Log out" /> 
               }
-            </span>
+            </div>
           }
           else 
           {
